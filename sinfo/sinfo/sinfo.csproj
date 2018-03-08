@@ -195,13 +195,37 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Areas\Cnp\CnpAreaRegistration.cs" />
+    <Compile Include="Areas\Cnp\Controllers\FalloMedida.cs" />
+    <Compile Include="Areas\Cnp\Controllers\TipoLugarsController.cs" />
+    <Compile Include="Areas\Cnp\Models\ClasePonal.cs" />
+    <Compile Include="Areas\Cnp\Models\ContextCnp.cs" />
+    <Compile Include="Areas\Cnp\Models\TipoLugar.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201803082020010_tipoLugar.cs" />
+    <Compile Include="Migrations\201803082020010_tipoLugar.Designer.cs">
+      <DependentUpon>201803082020010_tipoLugar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803082210366_codigoPonal.cs" />
+    <Compile Include="Migrations\201803082210366_codigoPonal.Designer.cs">
+      <DependentUpon>201803082210366_codigoPonal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803082212026_codigoPonalObligatorio.cs" />
+    <Compile Include="Migrations\201803082212026_codigoPonalObligatorio.Designer.cs">
+      <DependentUpon>201803082212026_codigoPonalObligatorio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803082214284_TipoAuto.cs" />
+    <Compile Include="Migrations\201803082214284_TipoAuto.Designer.cs">
+      <DependentUpon>201803082214284_TipoAuto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\GeneradorToken.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -221,6 +245,14 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Areas\Cnp\Views\web.config" />
+    <Content Include="Areas\Cnp\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Cnp\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\Cnp\Views\TipoLugars\Create.cshtml" />
+    <Content Include="Areas\Cnp\Views\TipoLugars\Delete.cshtml" />
+    <Content Include="Areas\Cnp\Views\TipoLugars\Details.cshtml" />
+    <Content Include="Areas\Cnp\Views\TipoLugars\Edit.cshtml" />
+    <Content Include="Areas\Cnp\Views\TipoLugars\Index.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -278,6 +310,20 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201803082020010_tipoLugar.resx">
+      <DependentUpon>201803082020010_tipoLugar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803082210366_codigoPonal.resx">
+      <DependentUpon>201803082210366_codigoPonal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803082212026_codigoPonalObligatorio.resx">
+      <DependentUpon>201803082212026_codigoPonalObligatorio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803082214284_TipoAuto.resx">
+      <DependentUpon>201803082214284_TipoAuto.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

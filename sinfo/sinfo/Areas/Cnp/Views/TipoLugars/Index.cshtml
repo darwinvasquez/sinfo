@@ -1,0 +1,49 @@
+﻿@model IEnumerable<sinfo.Areas.Cnp.Models.TipoLugar>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+<p>
+    @Html.ActionLink("Sincronizar con Ponal", "SincronizaTipoLugar")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TipoLugarId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Descripcion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Vigente)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TipoLugarId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Descripcion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Vigente)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.TipoLugarId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.TipoLugarId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.TipoLugarId })
+        </td>
+    </tr>
+}
+
+</table>
