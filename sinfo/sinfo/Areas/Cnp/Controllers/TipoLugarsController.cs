@@ -84,7 +84,7 @@ namespace sinfo.Areas.Cnp.Controllers
             foreach (var item in tipoLugar)
             {
                 bool existe = db.TipoLugar.Any(x => x.CodigoPonal == item.ID_DOMINIO);
-                if(existe)
+                if(!existe)
                 {
                     TipoLugar tipo = new TipoLugar();
                     tipo.CodigoPonal = Convert.ToInt32(item.ID_DOMINIO);
@@ -93,11 +93,12 @@ namespace sinfo.Areas.Cnp.Controllers
                     db.TipoLugar.Add(tipo);
                     db.SaveChanges();
                 }
-            }
+            }            
 
             return RedirectToAction("Index");
-        }
-               
+        }        
+
+
 
         // GET: Cnp/TipoLugars/Edit/5
         public ActionResult Edit(int? id)

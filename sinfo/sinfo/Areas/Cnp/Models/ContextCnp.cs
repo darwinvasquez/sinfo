@@ -14,7 +14,8 @@ namespace sinfo.Areas.Cnp.Models
 
         }
 
-        public virtual DbSet<TipoLugar> TipoLugar { get; set; }       
+        public virtual DbSet<TipoLugar> TipoLugar { get; set; }
+        public virtual DbSet<ListaComportamiento> ListaComportamiento { get; set; }
 
     }
 }

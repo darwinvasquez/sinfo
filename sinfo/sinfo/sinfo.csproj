@@ -200,6 +200,7 @@
     <Compile Include="Areas\Cnp\Controllers\TipoLugarsController.cs" />
     <Compile Include="Areas\Cnp\Models\ClasePonal.cs" />
     <Compile Include="Areas\Cnp\Models\ContextCnp.cs" />
+    <Compile Include="Areas\Cnp\Models\ListaComportamiento.cs" />
     <Compile Include="Areas\Cnp\Models\TipoLugar.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -222,6 +223,14 @@
     <Compile Include="Migrations\201803082214284_TipoAuto.cs" />
     <Compile Include="Migrations\201803082214284_TipoAuto.Designer.cs">
       <DependentUpon>201803082214284_TipoAuto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803082257185_ListaComportamiento.cs" />
+    <Compile Include="Migrations\201803082257185_ListaComportamiento.Designer.cs">
+      <DependentUpon>201803082257185_ListaComportamiento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803082305108_ListaComportamiento3.cs" />
+    <Compile Include="Migrations\201803082305108_ListaComportamiento3.Designer.cs">
+      <DependentUpon>201803082305108_ListaComportamiento3.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -323,6 +332,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201803082214284_TipoAuto.resx">
       <DependentUpon>201803082214284_TipoAuto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803082257185_ListaComportamiento.resx">
+      <DependentUpon>201803082257185_ListaComportamiento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803082305108_ListaComportamiento3.resx">
+      <DependentUpon>201803082305108_ListaComportamiento3.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

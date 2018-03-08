@@ -4,7 +4,7 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Tipo Tabla Local</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
@@ -19,6 +19,9 @@
             @Html.DisplayNameFor(model => model.TipoLugarId)
         </th>
         <th>
+            @Html.DisplayNameFor(model => model.CodigoPonal)
+        </th>
+        <th>
             @Html.DisplayNameFor(model => model.Descripcion)
         </th>
         <th>
@@ -31,6 +34,9 @@
     <tr>
         <td>
             @Html.DisplayFor(modelItem => item.TipoLugarId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CodigoPonal)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Descripcion)
