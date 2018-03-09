@@ -14,4 +14,20 @@ namespace sinfo.Areas.Cnp.Models
         public string ABREVIATURA { get; set; }
         public string OBSERVACION { get; set; }
     }
+
+    public class DominioComportamiento
+    {
+        public decimal ID_COMPORTAMIENTO { get; set; }
+        public string DESCRIPCION { get; set; }
+        public string USUARIO_CREACION { get; set; }
+        public Nullable<System.DateTime> FECHA_CREACION { get; set; }
+        public string MAQUINA_CREACION { get; set; }
+        public Nullable<decimal> ID_PAPA { get; set; }
+        public Nullable<decimal> VIGENTE { get; set; }
+        public Nullable<decimal> ID_TIPO { get; set; }
+        public string ORDEN { get; set; }
+        public Nullable<decimal> ID_TITULO { get; set; }
+        public Nullable<decimal> ID_CAPITULO { get; set; }
+        public Nullable<decimal> ID_ARTICULO { get; set; }
+    }
 }

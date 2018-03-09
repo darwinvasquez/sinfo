@@ -197,6 +197,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Areas\Cnp\CnpAreaRegistration.cs" />
     <Compile Include="Areas\Cnp\Controllers\FalloMedida.cs" />
+    <Compile Include="Areas\Cnp\Controllers\ListaComportamientoesController.cs" />
     <Compile Include="Areas\Cnp\Controllers\TipoLugarsController.cs" />
     <Compile Include="Areas\Cnp\Models\ClasePonal.cs" />
     <Compile Include="Areas\Cnp\Models\ContextCnp.cs" />
@@ -232,6 +233,14 @@
     <Compile Include="Migrations\201803082305108_ListaComportamiento3.Designer.cs">
       <DependentUpon>201803082305108_ListaComportamiento3.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201803091527008_listaComp.cs" />
+    <Compile Include="Migrations\201803091527008_listaComp.Designer.cs">
+      <DependentUpon>201803091527008_listaComp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803091531083_listaComp2.cs" />
+    <Compile Include="Migrations\201803091531083_listaComp2.Designer.cs">
+      <DependentUpon>201803091531083_listaComp2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\GeneradorToken.cs" />
@@ -262,6 +271,11 @@
     <Content Include="Areas\Cnp\Views\TipoLugars\Details.cshtml" />
     <Content Include="Areas\Cnp\Views\TipoLugars\Edit.cshtml" />
     <Content Include="Areas\Cnp\Views\TipoLugars\Index.cshtml" />
+    <Content Include="Areas\Cnp\Views\ListaComportamientoes\Create.cshtml" />
+    <Content Include="Areas\Cnp\Views\ListaComportamientoes\Delete.cshtml" />
+    <Content Include="Areas\Cnp\Views\ListaComportamientoes\Details.cshtml" />
+    <Content Include="Areas\Cnp\Views\ListaComportamientoes\Edit.cshtml" />
+    <Content Include="Areas\Cnp\Views\ListaComportamientoes\Index.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -338,6 +352,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201803082305108_ListaComportamiento3.resx">
       <DependentUpon>201803082305108_ListaComportamiento3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803091527008_listaComp.resx">
+      <DependentUpon>201803091527008_listaComp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803091531083_listaComp2.resx">
+      <DependentUpon>201803091531083_listaComp2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

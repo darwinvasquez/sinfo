@@ -1,0 +1,90 @@
+﻿@model sinfo.Areas.Cnp.Models.ListaComportamiento
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ListaComportamiento</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CodigoPonal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CodigoPonal)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IdPapa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IdPapa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Vigente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Vigente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IdTipo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IdTipo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Orden)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Orden)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IdTitulo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IdTitulo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IdCapitulo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IdCapitulo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IdArticulo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IdArticulo)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ListaComportamientoId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

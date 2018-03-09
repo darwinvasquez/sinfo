@@ -1,0 +1,90 @@
+﻿@model IEnumerable<sinfo.Areas.Cnp.Models.ListaComportamiento>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<p>
+    @Html.ActionLink("Sincronizar con Ponal", "SincronizaComportamiento")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ListaComportamientoId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CodigoPonal)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Descripcion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IdPapa)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Vigente)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IdTipo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Orden)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IdTitulo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IdCapitulo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IdArticulo)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ListaComportamientoId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CodigoPonal)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Descripcion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IdPapa)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Vigente)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IdTipo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Orden)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IdTitulo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IdCapitulo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IdArticulo)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ListaComportamientoId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ListaComportamientoId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ListaComportamientoId })
+        </td>
+    </tr>
+}
+
+</table>
