@@ -10,62 +10,59 @@ using sinfo.Areas.Cnp.Models;
 using System.Threading.Tasks;
 using sinfo.Models;
 using Newtonsoft.Json;
-using System.Net.Http;
-
 
 namespace sinfo.Areas.Cnp.Controllers
 {
-    public class LocalidadsController : Controller
+    public class EntidadsController : Controller
     {
         private ContextCnp db = new ContextCnp();
 
-        // GET: Cnp/Localidads
+        // GET: Cnp/Entidads
         public ActionResult Index()
         {
-            return View(db.Localidad.ToList());
+            return View(db.Entidad.ToList());
         }
 
-        // GET: Cnp/Localidads/Details/5
+        // GET: Cnp/Entidads/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Localidad localidad = db.Localidad.Find(id);
-            if (localidad == null)
+            Entidad entidad = db.Entidad.Find(id);
+            if (entidad == null)
             {
                 return HttpNotFound();
             }
-            return View(localidad);
+            return View(entidad);
         }
 
-        // GET: Cnp/Localidads/Create
+        // GET: Cnp/Entidads/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Cnp/Localidads/Create
+        // POST: Cnp/Entidads/Create
         // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que desea enlazarse. Para obtener 
         // más información vea http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "LocalidadId,CodigoPonal,CodigoMunicipio,Municipio,NombreLocalidad")] Localidad localidad)
+        public ActionResult Create([Bind(Include = "EntidadId,CodigoPonal,CodigoTipoEntidad,TipoEntidad,Descripcion,Direccion,Correo,Telefono,Celular,Nit,Web,Latitud,Longitud,CodMunicipio,Municipio,CodDepartamento,Departamento,Vigente")] Entidad entidad)
         {
             if (ModelState.IsValid)
             {
-                db.Localidad.Add(localidad);
+                db.Entidad.Add(entidad);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(localidad);
+            return View(entidad);
         }
-
-        public async Task<ActionResult> SincronizaLocalidad()
+        public async Task<ActionResult> Sincronizar()
         {
-            int codSw = (int)EnumCodigoUrlServicioWeb.ConsultarLocalidad;
+            int codSw = (int)EnumCodigoUrlServicioWeb.ConsultarEntidad;
             var user = db.PermisoServicioWeb.Where(x => x.UrlServicioWebId == codSw).ToList();
 
             foreach (var ite in user)
@@ -78,83 +75,93 @@ namespace sinfo.Areas.Cnp.Controllers
 
                 if (result != null)
                 {
-                    var datos = JsonConvert.DeserializeObject<List<DominioLocalidad>>(result);
+                    var datos = JsonConvert.DeserializeObject<List<DominioEntidad>>(result);
 
                     foreach (var item in datos)
                     {
-                        bool existe = db.Localidad.Any(x => x.CodigoPonal == item.ID_LOCALIDAD);
+                        bool existe = db.Entidad.Any(x => x.CodigoPonal == item.ID_ENTIDAD);
                         if (!existe)
                         {
-                            Localidad dato = new Localidad();
-                            dato.CodigoPonal = Convert.ToInt32(item.ID_LOCALIDAD);
-                            dato.CodigoMunicipio = (int)item.COD_MUNICIPIO;
+                            Entidad dato = new Entidad();
+                            dato.CodigoPonal = Convert.ToInt32(item.ID_ENTIDAD);
+                            dato.CodigoTipoEntidad = Convert.ToInt32(item.COD_TIPO_ENTIDAD);
+                            dato.TipoEntidad = item.TIPO_ENTIDAD;
+                            dato.Descripcion = item.DESCRIPCION;
+                            dato.Direccion = item.DIRECCION;
+                            dato.Correo = item.CORREO;
+                            dato.Telefono = item.TELEFONO;
+                            dato.Celular = item.CELULAR;
+                            dato.Nit = item.NIT;
+                            dato.Web = item.WEB;
+                            dato.Latitud = Convert.ToInt32(item.LATITUD);
+                            dato.Longitud = Convert.ToInt32(item.LONGITUD);
+                            dato.CodMunicipio = (int)item.COD_MUNICIPIO;
                             dato.Municipio = item.MUNICIPIO;
-                            dato.NombreLocalidad = item.LOCALIDAD;
+                            dato.CodDepartamento = (int)item.COD_DEPARTAMENTO;
+                            dato.Municipio = item.MUNICIPIO;
                             dato.Vigente = true;
-                            db.Localidad.Add(dato);
+                            db.Entidad.Add(dato);
                             db.SaveChanges();
                         }
                     }
                 }
-
             }
-
-            return RedirectToAction("Index", "Localidads");
+            return RedirectToAction("Index", "Entidads");
         }
 
-        // GET: Cnp/Localidads/Edit/5
+        // GET: Cnp/Entidads/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Localidad localidad = db.Localidad.Find(id);
-            if (localidad == null)
+            Entidad entidad = db.Entidad.Find(id);
+            if (entidad == null)
             {
                 return HttpNotFound();
             }
-            return View(localidad);
+            return View(entidad);
         }
 
-        // POST: Cnp/Localidads/Edit/5
+        // POST: Cnp/Entidads/Edit/5
         // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que desea enlazarse. Para obtener 
         // más información vea http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "LocalidadId,CodigoPonal,CodigoMunicipio,Municipio,NombreLocalidad")] Localidad localidad)
+        public ActionResult Edit([Bind(Include = "EntidadId,CodigoPonal,CodigoTipoEntidad,TipoEntidad,Descripcion,Direccion,Correo,Telefono,Celular,Nit,Web,Latitud,Longitud,CodMunicipio,Municipio,CodDepartamento,Departamento,Vigente")] Entidad entidad)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(localidad).State = EntityState.Modified;
+                db.Entry(entidad).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(localidad);
+            return View(entidad);
         }
 
-        // GET: Cnp/Localidads/Delete/5
+        // GET: Cnp/Entidads/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Localidad localidad = db.Localidad.Find(id);
-            if (localidad == null)
+            Entidad entidad = db.Entidad.Find(id);
+            if (entidad == null)
             {
                 return HttpNotFound();
             }
-            return View(localidad);
+            return View(entidad);
         }
 
-        // POST: Cnp/Localidads/Delete/5
+        // POST: Cnp/Entidads/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Localidad localidad = db.Localidad.Find(id);
-            db.Localidad.Remove(localidad);
+            Entidad entidad = db.Entidad.Find(id);
+            db.Entidad.Remove(entidad);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

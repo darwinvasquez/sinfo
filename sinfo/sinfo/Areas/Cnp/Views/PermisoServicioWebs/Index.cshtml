@@ -12,10 +12,16 @@
 <table class="table">
     <tr>
         <th>
+            @Html.DisplayNameFor(model => model.PermisoServicioWebId)
+        </th>
+        <th>
             @Html.DisplayNameFor(model => model.UrlBase.Descripcion)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.UrlServicioWeb.Metodo)
+            @Html.DisplayNameFor(model => model.UrlServicioWeb.UrlServicioWebId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UrlServicioWeb.Url)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.UsuarioAutorizado.Usuario)
@@ -29,10 +35,16 @@
 @foreach (var item in Model) {
     <tr>
         <td>
+            @Html.DisplayFor(modelItem => item.PermisoServicioWebId)
+        </td>
+        <td>
             @Html.DisplayFor(modelItem => item.UrlBase.Descripcion)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.UrlServicioWeb.Metodo)
+            @Html.DisplayFor(modelItem => item.UrlServicioWebId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UrlServicioWeb.Url)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.UsuarioAutorizado.Usuario)

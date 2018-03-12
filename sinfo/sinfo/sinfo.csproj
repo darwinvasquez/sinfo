@@ -197,6 +197,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Areas\Cnp\CnpAreaRegistration.cs" />
     <Compile Include="Areas\Cnp\Controllers\CodigoResponsesController.cs" />
+    <Compile Include="Areas\Cnp\Controllers\EntidadsController.cs" />
     <Compile Include="Areas\Cnp\Controllers\EstadoMedidasController.cs" />
     <Compile Include="Areas\Cnp\Controllers\ListaComportamientoesController.cs" />
     <Compile Include="Areas\Cnp\Controllers\LocalidadsController.cs" />
@@ -299,6 +300,10 @@
     <Compile Include="Migrations\201803122151439_UrlBaseDos.Designer.cs">
       <DependentUpon>201803122151439_UrlBaseDos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201803122246137_Entidad.cs" />
+    <Compile Include="Migrations\201803122246137_Entidad.Designer.cs">
+      <DependentUpon>201803122246137_Entidad.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\GeneradorToken.cs" />
@@ -375,6 +380,11 @@
     <Content Include="Areas\Cnp\Views\PermisoServicioWebs\Details.cshtml" />
     <Content Include="Areas\Cnp\Views\PermisoServicioWebs\Edit.cshtml" />
     <Content Include="Areas\Cnp\Views\PermisoServicioWebs\Index.cshtml" />
+    <Content Include="Areas\Cnp\Views\Entidads\Create.cshtml" />
+    <Content Include="Areas\Cnp\Views\Entidads\Delete.cshtml" />
+    <Content Include="Areas\Cnp\Views\Entidads\Details.cshtml" />
+    <Content Include="Areas\Cnp\Views\Entidads\Edit.cshtml" />
+    <Content Include="Areas\Cnp\Views\Entidads\Index.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -487,6 +497,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201803122151439_UrlBaseDos.resx">
       <DependentUpon>201803122151439_UrlBaseDos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803122246137_Entidad.resx">
+      <DependentUpon>201803122246137_Entidad.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

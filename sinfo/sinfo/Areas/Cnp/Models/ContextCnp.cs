@@ -23,5 +23,6 @@ namespace sinfo.Areas.Cnp.Models
         public virtual DbSet<UrlBase> UrlBase { get; set; }
         public virtual DbSet<UrlServicioWeb> UrlServicioWeb { get; set; }
         public virtual DbSet<PermisoServicioWeb> PermisoServicioWeb { get; set; }
+        public virtual DbSet<Entidad> Entidad { get; set; }
     }
 }

@@ -37,4 +37,24 @@ namespace sinfo.Areas.Cnp.Models
         public string MUNICIPIO { get; set; }
         public string LOCALIDAD { get; set; }
     }
+
+    public class DominioEntidad
+    {
+        public decimal ID_ENTIDAD { get; set; }
+        public decimal COD_TIPO_ENTIDAD { get; set; }
+        public string TIPO_ENTIDAD { get; set; }
+        public string DESCRIPCION { get; set; }
+        public string DIRECCION { get; set; }
+        public string CORREO { get; set; }
+        public string TELEFONO { get; set; }
+        public string CELULAR { get; set; }
+        public string NIT { get; set; }
+        public string WEB { get; set; }
+        public Nullable<decimal> LATITUD { get; set; }
+        public Nullable<decimal> LONGITUD { get; set; }
+        public Nullable<decimal> COD_MUNICIPIO { get; set; }
+        public string MUNICIPIO { get; set; }
+        public Nullable<int> COD_DEPARTAMENTO { get; set; }
+        public string DEPARTAMENTO { get; set; }
+    }
 }

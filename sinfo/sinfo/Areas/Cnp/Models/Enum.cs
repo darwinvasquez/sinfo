@@ -17,6 +17,9 @@ namespace sinfo.Areas.Cnp.Models
     public enum EnumCodigoUrlServicioWeb
     {
         [Description("Consultar localidades por municipio")]
-        ConsultarLocalidad = 1       
+        ConsultarLocalidad = 1 ,        
+    
+        [Description("Consultar enitdades por municipio")]
+        ConsultarEntidad = 2
     }
 }

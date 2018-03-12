@@ -1,0 +1,138 @@
+﻿@model IEnumerable<sinfo.Areas.Cnp.Models.Entidad>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<p>
+    @Html.ActionLink("Sincronizar Ponal", "Sincronizar")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.EntidadId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CodigoPonal)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CodigoTipoEntidad)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TipoEntidad)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Descripcion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Direccion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Correo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Telefono)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Celular)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nit)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Web)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Latitud)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Longitud)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CodMunicipio)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Municipio)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CodDepartamento)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Departamento)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Vigente)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.EntidadId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CodigoPonal)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CodigoTipoEntidad)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TipoEntidad)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Descripcion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Direccion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Correo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Telefono)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Celular)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nit)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Web)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Latitud)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Longitud)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CodMunicipio)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Municipio)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CodDepartamento)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Departamento)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Vigente)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.EntidadId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.EntidadId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.EntidadId })
+        </td>
+    </tr>
+}
+
+</table>
