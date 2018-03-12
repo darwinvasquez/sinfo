@@ -62,10 +62,12 @@ namespace sinfo.Areas.Cnp.Controllers
 
         public async Task<ActionResult> SincronizaComportamiento()
         {
+            string username = "darwi.vasquez@correo.policia.gov.co";
+            string password = "Policia2018*2019";
             var client = new HttpClient();
             client.BaseAddress = new Uri("https://catalogoservicioweb.policia.gov.co");
             var url = "/sw/api/ListaValor/ConsultaComportamiento";
-            var token = GeneradorToken.TokenPonal();
+            var token = GeneradorToken.TokenPonal(username, password);
             client.DefaultRequestHeaders.Add("Authorization", token);
             var response = await client.GetAsync(url);
 

@@ -19,19 +19,31 @@
                 @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">                    
+                <ul class="nav navbar-nav">
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Lista de Valores <span class="caret"></span></a>
                         <ul class="dropdown-menu">
                             <li>@Html.ActionLink("Tipo Lugar", "Index", "TipoLugars")</li>
                             <li>@Html.ActionLink("Comportamiento", "Index", "ListaComportamientoes")</li>
-                            <li><a href="#">Something else here</a></li>
+                            <li>@Html.ActionLink("Estado Medida", "Index", "EstadoMedidas")</li>
+                            <li>@Html.ActionLink("Localidades", "Index", "Localidads")</li>
                             <li role="separator" class="divider"></li>
-                            <li><a href="#">Separated link</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li><a href="#">One more separated link</a></li>
                         </ul>
-                    </li>                   
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Administrador <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("Eventos Servicio Web", "Index", "StatusCodeWebServices")</li>
+                            <li>@Html.ActionLink("Código Respuesta", "Index", "CodigoResponses")</li>
+                            <li role="separator" class="divider"></li>
+                            <li>@Html.ActionLink("Usuario Convenio", "Index", "UsuarioAutorizadoes")</li>
+                            <li>@Html.ActionLink("Permiso Usuario", "Index", "PermisoServicioWebs")
+                            <li>@Html.ActionLink("Url Base", "Index", "UrlBases")</li>
+                            <li>@Html.ActionLink("Url Servicio Web", "Index", "UrlServicioWebs")
+                    </li>
+                </ul>                  
+                    <li>@Html.ActionLink("Directorio", "Index", "EstadoMedidas")</li>
+                                       
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>

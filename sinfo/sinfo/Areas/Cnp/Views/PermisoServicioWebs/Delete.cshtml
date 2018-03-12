@@ -1,0 +1,56 @@
+﻿@model sinfo.Areas.Cnp.Models.PermisoServicioWeb
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>PermisoServicioWeb</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.UrlBase.Descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UrlBase.Descripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UrlServicioWeb.Metodo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UrlServicioWeb.Metodo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UsuarioAutorizado.Usuario)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UsuarioAutorizado.Usuario)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Vigente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Vigente)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

@@ -1,0 +1,58 @@
+﻿@model sinfo.Areas.Cnp.Models.UrlServicioWeb
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>UrlServicioWeb</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Metodo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Metodo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Url)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Url)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NombreServicio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NombreServicio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DescripcionServicio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DescripcionServicio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Propietario)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Propietario)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.UrlServicioWebId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

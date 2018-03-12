@@ -1,0 +1,50 @@
+﻿@model sinfo.Areas.Cnp.Models.PermisoServicioWeb
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>PermisoServicioWeb</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.UrlBase.Descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UrlBase.Descripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UrlServicioWeb.Metodo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UrlServicioWeb.Metodo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UsuarioAutorizado.Usuario)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UsuarioAutorizado.Usuario)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Vigente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Vigente)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.PermisoServicioWebId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

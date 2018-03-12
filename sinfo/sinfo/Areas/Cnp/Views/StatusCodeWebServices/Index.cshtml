@@ -1,0 +1,75 @@
+﻿@model IEnumerable<sinfo.Areas.Cnp.Models.StatusCodeWebService>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.StatusCodeWebServiceId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Accion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Usuario)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Url)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CodigoResponseId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PropietarioSw)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FechaRegistro)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Vigente)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.StatusCodeWebServiceId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Accion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Usuario)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Url)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CodigoResponse.CodigoStatus) - @Html.DisplayFor(modelItem => item.CodigoResponse.Descripcion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PropietarioSw)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FechaRegistro)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Vigente)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.StatusCodeWebServiceId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.StatusCodeWebServiceId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.StatusCodeWebServiceId })
+        </td>
+    </tr>
+}
+
+</table>

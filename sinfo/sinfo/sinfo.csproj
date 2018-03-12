@@ -196,13 +196,31 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Areas\Cnp\CnpAreaRegistration.cs" />
-    <Compile Include="Areas\Cnp\Controllers\FalloMedida.cs" />
+    <Compile Include="Areas\Cnp\Controllers\CodigoResponsesController.cs" />
+    <Compile Include="Areas\Cnp\Controllers\EstadoMedidasController.cs" />
     <Compile Include="Areas\Cnp\Controllers\ListaComportamientoesController.cs" />
+    <Compile Include="Areas\Cnp\Controllers\LocalidadsController.cs" />
+    <Compile Include="Areas\Cnp\Controllers\NotificacionController.cs" />
+    <Compile Include="Areas\Cnp\Controllers\PermisoServicioWebsController.cs" />
+    <Compile Include="Areas\Cnp\Controllers\StatusCodeWebServicesController.cs" />
     <Compile Include="Areas\Cnp\Controllers\TipoLugarsController.cs" />
+    <Compile Include="Areas\Cnp\Controllers\UrlBasesController.cs" />
+    <Compile Include="Areas\Cnp\Controllers\UrlServicioWebsController.cs" />
+    <Compile Include="Areas\Cnp\Controllers\UsuarioAutorizadoesController.cs" />
     <Compile Include="Areas\Cnp\Models\ClasePonal.cs" />
+    <Compile Include="Areas\Cnp\Models\CodigoResponse.cs" />
     <Compile Include="Areas\Cnp\Models\ContextCnp.cs" />
+    <Compile Include="Areas\Cnp\Models\Entidad.cs" />
+    <Compile Include="Areas\Cnp\Models\Enum.cs" />
+    <Compile Include="Areas\Cnp\Models\EstadoMedida.cs" />
     <Compile Include="Areas\Cnp\Models\ListaComportamiento.cs" />
+    <Compile Include="Areas\Cnp\Models\Localidad.cs" />
+    <Compile Include="Areas\Cnp\Models\PermisoServicioWeb.cs" />
+    <Compile Include="Areas\Cnp\Models\StatusCodeWebService.cs" />
     <Compile Include="Areas\Cnp\Models\TipoLugar.cs" />
+    <Compile Include="Areas\Cnp\Models\UrlBase.cs" />
+    <Compile Include="Areas\Cnp\Models\UrlServicioWeb.cs" />
+    <Compile Include="Areas\Cnp\Models\UsuarioAutorizado.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -241,6 +259,46 @@
     <Compile Include="Migrations\201803091531083_listaComp2.Designer.cs">
       <DependentUpon>201803091531083_listaComp2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201803101409489_estadoMedida.cs" />
+    <Compile Include="Migrations\201803101409489_estadoMedida.Designer.cs">
+      <DependentUpon>201803101409489_estadoMedida.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803111819255_UsuarioAutorizado.cs" />
+    <Compile Include="Migrations\201803111819255_UsuarioAutorizado.Designer.cs">
+      <DependentUpon>201803111819255_UsuarioAutorizado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803111821562_UsuarioAut.cs" />
+    <Compile Include="Migrations\201803111821562_UsuarioAut.Designer.cs">
+      <DependentUpon>201803111821562_UsuarioAut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803111956093_localidad.cs" />
+    <Compile Include="Migrations\201803111956093_localidad.Designer.cs">
+      <DependentUpon>201803111956093_localidad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803112015086_localidadVigente.cs" />
+    <Compile Include="Migrations\201803112015086_localidadVigente.Designer.cs">
+      <DependentUpon>201803112015086_localidadVigente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803121346084_StatusCodeWebService.cs" />
+    <Compile Include="Migrations\201803121346084_StatusCodeWebService.Designer.cs">
+      <DependentUpon>201803121346084_StatusCodeWebService.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803121543160_CodigoResponse.cs" />
+    <Compile Include="Migrations\201803121543160_CodigoResponse.Designer.cs">
+      <DependentUpon>201803121543160_CodigoResponse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803121615384_CodigoResponseStatus.cs" />
+    <Compile Include="Migrations\201803121615384_CodigoResponseStatus.Designer.cs">
+      <DependentUpon>201803121615384_CodigoResponseStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803121618315_CodigoResponseStatusObligatorio.cs" />
+    <Compile Include="Migrations\201803121618315_CodigoResponseStatusObligatorio.Designer.cs">
+      <DependentUpon>201803121618315_CodigoResponseStatusObligatorio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803122151439_UrlBaseDos.cs" />
+    <Compile Include="Migrations\201803122151439_UrlBaseDos.Designer.cs">
+      <DependentUpon>201803122151439_UrlBaseDos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\GeneradorToken.cs" />
@@ -276,6 +334,47 @@
     <Content Include="Areas\Cnp\Views\ListaComportamientoes\Details.cshtml" />
     <Content Include="Areas\Cnp\Views\ListaComportamientoes\Edit.cshtml" />
     <Content Include="Areas\Cnp\Views\ListaComportamientoes\Index.cshtml" />
+    <Content Include="Areas\Cnp\Views\EstadoMedidas\Create.cshtml" />
+    <Content Include="Areas\Cnp\Views\EstadoMedidas\Delete.cshtml" />
+    <Content Include="Areas\Cnp\Views\EstadoMedidas\Details.cshtml" />
+    <Content Include="Areas\Cnp\Views\EstadoMedidas\Edit.cshtml" />
+    <Content Include="Areas\Cnp\Views\EstadoMedidas\Index.cshtml" />
+    <Content Include="Areas\Cnp\Views\UsuarioAutorizadoes\Create.cshtml" />
+    <Content Include="Areas\Cnp\Views\UsuarioAutorizadoes\Delete.cshtml" />
+    <Content Include="Areas\Cnp\Views\UsuarioAutorizadoes\Details.cshtml" />
+    <Content Include="Areas\Cnp\Views\UsuarioAutorizadoes\Edit.cshtml" />
+    <Content Include="Areas\Cnp\Views\UsuarioAutorizadoes\Index.cshtml" />
+    <Content Include="Areas\Cnp\Views\Localidads\Create.cshtml" />
+    <Content Include="Areas\Cnp\Views\Localidads\Delete.cshtml" />
+    <Content Include="Areas\Cnp\Views\Localidads\Details.cshtml" />
+    <Content Include="Areas\Cnp\Views\Localidads\Edit.cshtml" />
+    <Content Include="Areas\Cnp\Views\Localidads\Index.cshtml" />
+    <Content Include="Areas\Cnp\Views\Notificacion\SinPermiso.cshtml" />
+    <Content Include="Areas\Cnp\Views\StatusCodeWebServices\Create.cshtml" />
+    <Content Include="Areas\Cnp\Views\StatusCodeWebServices\Delete.cshtml" />
+    <Content Include="Areas\Cnp\Views\StatusCodeWebServices\Details.cshtml" />
+    <Content Include="Areas\Cnp\Views\StatusCodeWebServices\Edit.cshtml" />
+    <Content Include="Areas\Cnp\Views\StatusCodeWebServices\Index.cshtml" />
+    <Content Include="Areas\Cnp\Views\CodigoResponses\Create.cshtml" />
+    <Content Include="Areas\Cnp\Views\CodigoResponses\Delete.cshtml" />
+    <Content Include="Areas\Cnp\Views\CodigoResponses\Details.cshtml" />
+    <Content Include="Areas\Cnp\Views\CodigoResponses\Edit.cshtml" />
+    <Content Include="Areas\Cnp\Views\CodigoResponses\Index.cshtml" />
+    <Content Include="Areas\Cnp\Views\UrlBases\Create.cshtml" />
+    <Content Include="Areas\Cnp\Views\UrlBases\Delete.cshtml" />
+    <Content Include="Areas\Cnp\Views\UrlBases\Details.cshtml" />
+    <Content Include="Areas\Cnp\Views\UrlBases\Edit.cshtml" />
+    <Content Include="Areas\Cnp\Views\UrlBases\Index.cshtml" />
+    <Content Include="Areas\Cnp\Views\UrlServicioWebs\Create.cshtml" />
+    <Content Include="Areas\Cnp\Views\UrlServicioWebs\Delete.cshtml" />
+    <Content Include="Areas\Cnp\Views\UrlServicioWebs\Details.cshtml" />
+    <Content Include="Areas\Cnp\Views\UrlServicioWebs\Edit.cshtml" />
+    <Content Include="Areas\Cnp\Views\UrlServicioWebs\Index.cshtml" />
+    <Content Include="Areas\Cnp\Views\PermisoServicioWebs\Create.cshtml" />
+    <Content Include="Areas\Cnp\Views\PermisoServicioWebs\Delete.cshtml" />
+    <Content Include="Areas\Cnp\Views\PermisoServicioWebs\Details.cshtml" />
+    <Content Include="Areas\Cnp\Views\PermisoServicioWebs\Edit.cshtml" />
+    <Content Include="Areas\Cnp\Views\PermisoServicioWebs\Index.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -358,6 +457,36 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201803091531083_listaComp2.resx">
       <DependentUpon>201803091531083_listaComp2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803101409489_estadoMedida.resx">
+      <DependentUpon>201803101409489_estadoMedida.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803111819255_UsuarioAutorizado.resx">
+      <DependentUpon>201803111819255_UsuarioAutorizado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803111821562_UsuarioAut.resx">
+      <DependentUpon>201803111821562_UsuarioAut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803111956093_localidad.resx">
+      <DependentUpon>201803111956093_localidad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803112015086_localidadVigente.resx">
+      <DependentUpon>201803112015086_localidadVigente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803121346084_StatusCodeWebService.resx">
+      <DependentUpon>201803121346084_StatusCodeWebService.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803121543160_CodigoResponse.resx">
+      <DependentUpon>201803121543160_CodigoResponse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803121615384_CodigoResponseStatus.resx">
+      <DependentUpon>201803121615384_CodigoResponseStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803121618315_CodigoResponseStatusObligatorio.resx">
+      <DependentUpon>201803121618315_CodigoResponseStatusObligatorio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803122151439_UrlBaseDos.resx">
+      <DependentUpon>201803122151439_UrlBaseDos.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

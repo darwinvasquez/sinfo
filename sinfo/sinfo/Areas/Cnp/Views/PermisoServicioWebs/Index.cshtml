@@ -1,0 +1,51 @@
+﻿@model IEnumerable<sinfo.Areas.Cnp.Models.PermisoServicioWeb>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.UrlBase.Descripcion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UrlServicioWeb.Metodo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UsuarioAutorizado.Usuario)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Vigente)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.UrlBase.Descripcion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UrlServicioWeb.Metodo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UsuarioAutorizado.Usuario)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Vigente)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.PermisoServicioWebId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.PermisoServicioWebId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.PermisoServicioWebId })
+        </td>
+    </tr>
+}
+
+</table>

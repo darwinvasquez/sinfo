@@ -30,4 +30,11 @@ namespace sinfo.Areas.Cnp.Models
         public Nullable<decimal> ID_CAPITULO { get; set; }
         public Nullable<decimal> ID_ARTICULO { get; set; }
     }
+    public class DominioLocalidad
+    {
+        public decimal ID_LOCALIDAD { get; set; }
+        public Nullable<decimal> COD_MUNICIPIO { get; set; }
+        public string MUNICIPIO { get; set; }
+        public string LOCALIDAD { get; set; }
+    }
 }
