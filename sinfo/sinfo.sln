@@ -5,6 +5,16 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sinfo", "sinfo\sinfo.csproj", "{1EB0226A-143F-4848-BC7D-84DCB88F9F10}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 UL", "1 UL", "{1BD4A823-A1E4-4BA3-936C-96365445F815}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 BL", "2 BL", "{737FB2F4-D176-4F25-BE5E-D56F53AED9E2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 DL", "3 DL", "{FFD88083-3C77-4350-B15C-9F1E1BC1595B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 CL", "4 CL", "{A22204E6-D96A-439E-9141-E7F2B38649FA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5 SL", "5 SL", "{50DF538E-3F64-4087-9F34-5773C4AEA783}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +28,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1EB0226A-143F-4848-BC7D-84DCB88F9F10} = {1BD4A823-A1E4-4BA3-936C-96365445F815}
 	EndGlobalSection
 EndGlobal
