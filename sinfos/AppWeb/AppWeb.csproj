@@ -232,10 +232,11 @@
     <Content Include="Areas\Cnp\Views\Shared\_Layout.cshtml" />
     <Content Include="Areas\Cnp\Views\CobroCoactivo\Index.cshtml" />
     <Content Include="Areas\Cnp\Views\Hechos\Adicionar.cshtml" />
-    <Content Include="Areas\Cnp\Views\Hechos\Index.cshtml" />
     <Content Include="Areas\Cnp\Views\Hechos\VariosCampos.cshtml" />
     <Content Include="Areas\Cnp\Views\Personas\Adicionar.cshtml" />
-    <Content Include="Areas\Cnp\Views\HechoPersona\Adicionar.cshtml" />
+    <Content Include="Areas\Cnp\Views\Hechos\Index.cshtml" />
+    <Content Include="Areas\Cnp\Views\HechoPersona\Agregar.cshtml" />
+    <Content Include="Areas\Cnp\Views\Personas\ObtenerPeresonaIdHechos.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\ini.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />

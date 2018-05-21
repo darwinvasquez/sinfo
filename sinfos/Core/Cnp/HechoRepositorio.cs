@@ -8,10 +8,10 @@ using System.Web;
 
 namespace Core.Cnp
 {
-    public class HechoRepositorio : IAgregarHechoProcesoVerbalAbreviado, IListarHechosVerbalAbreviado
+    public class HechoRepositorio : IAgregarHechoProcesoVerbalAbreviado, IListarHechosVerbalAbreviado, IConsultarHechosVerbalAbreviadoId
     {
         public string AgregarHechoProcesoVerbalAbreviado(CnpHechoDTO _cnpHechosDto)
-        {          
+        {
             Hecho cnpHechos = new Hecho();
 
             cnpHechos.Fecha = _cnpHechosDto.Fecha;
@@ -38,17 +38,17 @@ namespace Core.Cnp
             cnpHechos.IdTipoLugar = _cnpHechosDto.IdTipoLugar;
             cnpHechos.Descargos = _cnpHechosDto.Descargos;
             cnpHechos.HoraHechos = _cnpHechosDto.HoraHechos;
-           
+
             cnpHechos.AtiendeApelacion = _cnpHechosDto.AtiendeApelacion;
-            cnpHechos.IdEntidadeRemiteApelac = _cnpHechosDto.IdEntidadeRemiteApelac;           
+            cnpHechos.IdEntidadeRemiteApelac = _cnpHechosDto.IdEntidadeRemiteApelac;
             cnpHechos.Fuente = 1;
             cnpHechos.IdTipoTransp = _cnpHechosDto.IdTipoTransp;
 
             cnpHechos.Vigente = true;
             cnpHechos.UsuarioCreacion = HttpContext.Current.User.Identity.Name;
-            cnpHechos.MaquinaCreacion = HttpContext.Current.Request.UserHostAddress;      
+            cnpHechos.MaquinaCreacion = HttpContext.Current.Request.UserHostAddress;
             cnpHechos.FechaCreacion = DateTime.Now;
-            
+
             using (ContextCnp db = new ContextCnp())
             {
                 cnpHechos.HechoId = Guid.NewGuid().ToString();
@@ -68,19 +68,37 @@ namespace Core.Cnp
 
                 var resultado = db.Hecho.Select(x => new CnpHechoDTO
                 {
-                    Fecha = x.Fecha, 
+                    HechoId = x.HechoId,
+                    Fecha = x.Fecha,
                     IdMunicipio = x.IdMunicipio,
                     IdBarrio = x.IdBarrio,
                     Localidad = x.Localidad,
                     DireccionHechos = x.DireccionHechos
-            });
+                });
                 return resultado.ToList();
             }
-
-
-
         }
 
+        public CnpHechoDTO ConsultarHechosVerbalAbreviadoId(string id)
+        {
+            using (ContextCnp db = new ContextCnp())
+            {
+                db.Configuration.LazyLoadingEnabled = false;
+                db.Configuration.ProxyCreationEnabled = false;
+                db.Configuration.AutoDetectChangesEnabled = false;
 
+                var resultado = db.Hecho.Where(x => x.Vigente == true && x.HechoId == id).
+                    Select(x => new CnpHechoDTO
+                    {
+                        HechoId = x.HechoId,
+                        Fecha = x.Fecha,
+                        IdMunicipio = x.IdMunicipio,
+                        IdBarrio = x.IdBarrio,
+                        Localidad = x.Localidad,
+                        DireccionHechos = x.DireccionHechos
+                    }).FirstOrDefault();
+                return resultado;
+            }
+        }
     }
 }

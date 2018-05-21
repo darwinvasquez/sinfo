@@ -68,8 +68,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="Cnp\CalidadPersonaCnp.cs" />
     <Compile Include="Cnp\ContextCnp.cs" />
     <Compile Include="Cnp\Hecho.cs" />
+    <Compile Include="Cnp\Persona.cs" />
     <Compile Include="Migrations\201805201546280_Tabla verbal abreviado.cs" />
     <Compile Include="Migrations\201805201546280_Tabla verbal abreviado.Designer.cs">
       <DependentUpon>201805201546280_Tabla verbal abreviado.cs</DependentUpon>
@@ -77,6 +79,22 @@
     <Compile Include="Migrations\201805201809433_Tabla verbal abreviado ajustes.cs" />
     <Compile Include="Migrations\201805201809433_Tabla verbal abreviado ajustes.Designer.cs">
       <DependentUpon>201805201809433_Tabla verbal abreviado ajustes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805212201413_Tabla persona y calidad de persona cnp.cs" />
+    <Compile Include="Migrations\201805212201413_Tabla persona y calidad de persona cnp.Designer.cs">
+      <DependentUpon>201805212201413_Tabla persona y calidad de persona cnp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805212220578_Tabla persona cambiando propiedades.cs" />
+    <Compile Include="Migrations\201805212220578_Tabla persona cambiando propiedades.Designer.cs">
+      <DependentUpon>201805212220578_Tabla persona cambiando propiedades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805212223107_Tabla_persona_cmabiando_propiedad.cs" />
+    <Compile Include="Migrations\201805212223107_Tabla_persona_cmabiando_propiedad.Designer.cs">
+      <DependentUpon>201805212223107_Tabla_persona_cmabiando_propiedad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805212310499_Tabla propiedad de navegacion hecho_persona.cs" />
+    <Compile Include="Migrations\201805212310499_Tabla propiedad de navegacion hecho_persona.Designer.cs">
+      <DependentUpon>201805212310499_Tabla propiedad de navegacion hecho_persona.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -108,6 +126,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201805201809433_Tabla verbal abreviado ajustes.resx">
       <DependentUpon>201805201809433_Tabla verbal abreviado ajustes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805212201413_Tabla persona y calidad de persona cnp.resx">
+      <DependentUpon>201805212201413_Tabla persona y calidad de persona cnp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805212220578_Tabla persona cambiando propiedades.resx">
+      <DependentUpon>201805212220578_Tabla persona cambiando propiedades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805212223107_Tabla_persona_cmabiando_propiedad.resx">
+      <DependentUpon>201805212223107_Tabla_persona_cmabiando_propiedad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805212310499_Tabla propiedad de navegacion hecho_persona.resx">
+      <DependentUpon>201805212310499_Tabla propiedad de navegacion hecho_persona.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

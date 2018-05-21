@@ -1,0 +1,105 @@
+﻿@model IEnumerable<Comun.DTOs.PersonaDTO>
+
+@{
+    ViewBag.Title = "ObtenerPeresonaIdHechos";
+}
+
+<h2>ObtenerPeresonaIdHechos</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.PersonaId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nombres)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Apellidos)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TipoIdentificacion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Identificacion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FechaNacimiento)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Telefono)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NacionalidadId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IdPaisReside)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IdMunicipioReside)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IdDepartamentoReside)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DireccionReside)
+        </th> 
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.PersonaId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nombres)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Apellidos)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TipoIdentificacion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Identificacion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FechaNacimiento)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Telefono)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NacionalidadId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IdPaisReside)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IdMunicipioReside)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IdDepartamentoReside)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DireccionReside)
+        </td>       
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>

@@ -17,7 +17,8 @@ namespace AppWeb.Areas.Cnp
             context.MapRoute(
                 "Cnp_default",
                 "Cnp/{controller}/{action}/{id}",
-                new { action = "Index", id = UrlParameter.Optional }
+                new { action = "Index", id = UrlParameter.Optional },
+                namespaces: new string[] { "AppWeb.Areas.Cnp.Controllers" }
             );
         }
     }

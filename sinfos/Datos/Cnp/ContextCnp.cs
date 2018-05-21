@@ -11,5 +11,7 @@
         }
         
         public virtual DbSet<Hecho> Hecho { get; set; }
+        public virtual DbSet<Persona> Persona { get; set; }
+        public virtual DbSet<CalidadPersonaCnp> CalidadPersonaCnp { get; set; }
     }   
 }

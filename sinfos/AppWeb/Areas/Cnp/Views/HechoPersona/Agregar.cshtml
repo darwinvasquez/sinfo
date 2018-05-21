@@ -1,0 +1,251 @@
+﻿@model Comun.DTOs.CnpHechoDTO
+
+@{
+    ViewBag.Title = "Adicionar";
+}
+
+<h2>Adicionar persona</h2>
+
+<div>
+    <h4>CnpHechoDTO</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Fecha)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fecha)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IdMunicipio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IdMunicipio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IdBarrio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IdBarrio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Localidad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Localidad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DireccionHechos)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DireccionHechos)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IdComportamiento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IdComportamiento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Apelacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Apelacion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RelatoHechos)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RelatoHechos)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Mop)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Mop)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Mrs)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Mrs)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Minc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Minc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Mtpp)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Mtpp)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Msia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Msia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Mtppp)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Mtppp)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Minicoe)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Minicoe)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Minisoe)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Minisoe)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CnpArt)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CnpArt)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CnpNum)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CnpNum)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CnpLit)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CnpLit)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Latitud)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Latitud)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Longitud)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Longitud)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IdTipoLugar)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IdTipoLugar)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Descargos)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descargos)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HoraHechos)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HoraHechos)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AtiendeApelacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AtiendeApelacion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IdEntidadeRemiteApelac)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IdEntidadeRemiteApelac)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Fuente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fuente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IdTipoTransp)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IdTipoTransp)
+        </dd>
+
+    </dl>
+</div>
+
+@Html.Action("Adicionar", "Personas", new { hechoId = Model.HechoId })
+
+@Html.Action("ObtenerPeresonaIdHechos", "Personas", new { id = Model.HechoId })
+
+
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
+
+
+

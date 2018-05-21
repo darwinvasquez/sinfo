@@ -51,10 +51,10 @@ namespace AppWeb.Areas.Cnp.Controllers
           
         }
         
-        public PartialViewResult InfoHecho(string id)
-        {
+        //public PartialViewResult InfoHecho(string id)
+        //{
             
-        }
+        //}
            
         
         

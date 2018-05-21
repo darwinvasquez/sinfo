@@ -57,11 +57,17 @@
   <ItemGroup>
     <Compile Include="Class1.cs" />
     <Compile Include="Cnp\Abstraccion\IAgregarHechoProcesoVerbalAbreviado.cs" />
+    <Compile Include="Cnp\Abstraccion\IAgregarPersonaProcesoVerbalAbreviado.cs" />
     <Compile Include="Cnp\Abstraccion\IConsultarCobroCoactivo.cs" />
+    <Compile Include="Cnp\Abstraccion\IConsultarHechosVerbalAbreviadoId.cs" />
+    <Compile Include="Cnp\Abstraccion\IConsultarPersonaPorIdHecho.cs" />
     <Compile Include="Cnp\Abstraccion\IListarHechosVerbalAbreviado.cs" />
+    <Compile Include="Cnp\Abstraccion\IRegistrarPersonaHecho.cs" />
     <Compile Include="Cnp\Abstraccion\IRegistrarProcesoVerbalAbreviado.cs" />
     <Compile Include="Cnp\HechoRepositorio.cs" />
     <Compile Include="Cnp\Multa.cs" />
+    <Compile Include="Cnp\PersonaRepositorio.cs" />
+    <Compile Include="Cnp\Reglas\RegistrarPersonaHecho.cs" />
     <Compile Include="Cnp\Reglas\RegistrarProcesoVerbalAbreviado.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

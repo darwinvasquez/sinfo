@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -134,8 +135,11 @@ namespace Datos.Cnp
         [StringLength(maximumLength: 255)]
         public string MaquinaCreacion { get; set; }
 
-        
-
         #endregion
+
+        #region Propiedades de Navegacion
+        public virtual ICollection<CalidadPersonaCnp> CalidadPersonaCnp { get; set; } 
+        #endregion
+
     }
 }

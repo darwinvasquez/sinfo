@@ -5,7 +5,9 @@ using System.ComponentModel.DataAnnotations;
 namespace Comun.DTOs
 {
     public class CnpHechoDTO
-    {        
+    {
+
+        public string HechoId { get; set; }
         /// <summary>
         /// Fecha cuando ocurrieron los hechos. Formato “dd/mm/yyyy”
         /// </summary>
