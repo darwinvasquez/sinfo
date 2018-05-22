@@ -12,10 +12,21 @@ namespace Core.Cnp.Reglas
     {
         public bool AdicionarPersonaHecho(PersonaDTO _params)
         {
-            string mensaje = string.Empty;
-
+            string personaId = string.Empty;
+            string calidadId = string.Empty;
+            
             IAgregarPersonaProcesoVerbalAbreviado persona = new PersonaRepositorio();
-            return persona.AgregarPersonaProcesoVerbalAbreviado(_params, out mensaje);
+            persona.AgregarPersonaProcesoVerbalAbreviado(_params, out personaId);
+
+            _params.PersonaId = personaId;
+
+            IAgregarCalidadPersonaCnp calidad = new CalidadPersonaCnpRepositorio();
+            calidad.AgregarCalidadPersonaCnp(_params, out calidadId);
+
+
+            return true;
+
+
         }
     }
 }

@@ -110,6 +110,9 @@ namespace Datos.Cnp
     
         public int IdTipoTransp { get; set; }
 
+        [StringLength(40)]
+        public string TipoMedidaId { get; set; }
+
         #region Propiedades retornada por el servicio de Policiía Nacional
 
         /// <summary>

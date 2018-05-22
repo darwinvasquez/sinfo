@@ -43,6 +43,14 @@ namespace Comun.DTOs
 
         public string DireccionReside { get; set; }
 
+        public bool MenorEdad { get; set; }
+
+        public int TipoInfractoId { get; set; }        
+
+        public int TipoPoblacion { get; set; }
+
+        public string RepresentanteMenor { get; set; }
+
         public bool Vigente { get; set; }
 
         public DateTime FechaCreacion { get; set; }
