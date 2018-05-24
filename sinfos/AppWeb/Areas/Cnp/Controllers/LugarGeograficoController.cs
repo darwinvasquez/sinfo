@@ -16,5 +16,13 @@ namespace AppWeb.Areas.Cnp.Controllers
             var datos = paises.ConsultarPais();
             return Json(new SelectList(datos, "PaisId", "Descripcion"));
         }
+
+        public JsonResult ConsultarBarrio()
+        {
+            IConsultarPais paises = new LugarGeografico();
+            var datos = paises.ConsultarPais();
+            return Json(new SelectList(datos, "PaisId", "Descripcion"));
+        }
+
     }
 }

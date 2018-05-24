@@ -29,7 +29,9 @@ namespace AppWeb.Areas.Cnp.Controllers
         {
             IConsultarPais paises = new LugarGeografico();
             var datos = paises.ConsultarPais();
-            ViewBag.PaisId = new SelectList(datos, "PaisId", "Descripcion");
+            //ViewBag.PaisId = new SelectList(datos, "PaisId", "Descripcion");
+
+            //ViewBag.BarrioId = new SelectList(null, "", "");
             return View();
         }
 

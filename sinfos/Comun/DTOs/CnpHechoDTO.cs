@@ -7,13 +7,16 @@ namespace Comun.DTOs
     public class CnpHechoDTO
     {
 
+
+       
+        [StringLength(40)]
         public string HechoId { get; set; }
+
         /// <summary>
         /// Fecha cuando ocurrieron los hechos. Formato “dd/mm/yyyy”
         /// </summary>
         [DataType(DataType.Date)]
         public DateTime Fecha { get; set; }
-
 
         [StringLength(40)]
         public string PaisId { get; set; }
@@ -29,26 +32,27 @@ namespace Comun.DTOs
 
         /// <summary>
         /// Barrio donde ocurrió el hecho(s).
-        /// </summary>               
-
+        /// </summary>
+        [StringLength(40)]
         public string BarrioId { get; set; }
-       
+
+        [StringLength(40)]
         public string LocalidadId { get; set; }
 
-        [StringLength(maximumLength: 2555)]
+        [StringLength(255)]
         public string DireccionHechos { get; set; }
 
-        public int IdComportamiento { get; set; }
-
-        [StringLength(maximumLength: 2)]
+        [StringLength(2)]
         public string Apelacion { get; set; }
 
         [StringLength(maximumLength: 4000)]
+        [DataType(DataType.MultilineText)]
         public string RelatoHechos { get; set; }
 
         /// <summary>
         /// Medio de policía (Orden de Policía).
-        /// </summary>
+        /// </summary>        
+        [Display(Name = "Orden de Policía")]
         public int Mop { get; set; }
 
         /// <summary>
@@ -69,36 +73,53 @@ namespace Comun.DTOs
         /// <summary>
         /// Medio de policía (Suspensión inmediata de la actividad ).
         /// </summary>
-        public Nullable<decimal> Msia { get; set; }
+        public int Msia { get; set; }
 
         /// <summary>
         /// Medio de policía (Traslado para procedimiento policivo).
         /// </summary>
-        public Nullable<decimal> Mtppp { get; set; }
+        public int Mtppp { get; set; }
 
         /// <summary>
         /// Medio de policía (Ingreso a inmueble con orden escrita).
         /// </summary>
-        public Nullable<decimal> Minicoe { get; set; }
+        public int Minicoe { get; set; }
 
         /// <summary>
         /// Medio de policía (Ingreso a inmueble sin orden escrita).
         /// </summary>
-        public Nullable<decimal> Minisoe { get; set; }
+        public int Minisoe { get; set; }
 
-        public int CnpArt { get; set; }
+        [StringLength(40)]
+        public string TituloId { get; set; }
 
-        public int CnpNum { get; set; }
+        [StringLength(40)]
+        public string CapituloId { get; set; }
 
-        public int CnpLit { get; set; }
+        [StringLength(40)]
+        public string ArticuloId { get; set; }
+
+        [StringLength(40)]
+        public string NumeralId { get; set; }
+
+        [StringLength(40)]
+        public string LiteralId { get; set; }
+
+        /// <summary>
+        /// Corresponde al último comportamiento seleccionado al código nacional de Policía
+        /// </summary>
+        [StringLength(40)]
+        public string ComportamientoId { get; set; }
 
         public decimal Latitud { get; set; }
 
         public decimal Longitud { get; set; }
 
-        public int IdTipoLugar { get; set; }
+        [StringLength(40)]
+        public string TipoLugarId { get; set; }
 
         [StringLength(maximumLength: 255)]
+        [DataType(DataType.MultilineText)]
         public string Descargos { get; set; }
 
         public DateTime HoraHechos { get; set; }
@@ -106,11 +127,35 @@ namespace Comun.DTOs
         [StringLength(maximumLength: 2)]
         public string AtiendeApelacion { get; set; }
 
-        public int IdEntidadeRemiteApelac { get; set; }
+        [StringLength(40)]
+        public string EntidadRemiteApelacionId { get; set; }
 
-        public int Fuente { get; set; }
+        [StringLength(40)]
+        public string FuenteId { get; set; }
 
-        public int IdTipoTransp { get; set; }
+        [StringLength(40)]
+        public string TipoTranspId { get; set; }
+
+        /// <summary>
+        /// Tipo de medida (Querella o Aplicación CNP)
+        /// </summary>
+        [StringLength(40)]
+        public string TipoMedidaId { get; set; }
+
+        #region Propiedades retornada por el servicio de Policiía Nacional
+
+        /// <summary>
+        /// Id Hechos generado por la Policía Nacional
+        /// </summary>
+        public int idHechosPonal { get; set; }
+
+        /// <summary>
+        /// Número de expediente emitido por la Policía Nacional
+        /// </summary>
+        [StringLength(maximumLength: 255)]
+        public string NumeroExpediente { get; set; }
+
+        #endregion       
 
         public List<CnpPersona> Persona { get; set; }
     }

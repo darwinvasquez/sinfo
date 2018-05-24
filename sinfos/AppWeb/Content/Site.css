@@ -3,6 +3,12 @@
     padding-bottom: 20px;
 }
 
+.panel-default {        
+    border-top: 3px solid #f39c12;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
 /* Set padding to keep content from hitting the edges */
 /*.body-content {
     padding-left: 15px;
