@@ -15,34 +15,34 @@ namespace Core.Cnp
             Hecho cnpHechos = new Hecho();
 
             cnpHechos.Fecha = _cnpHechosDto.Fecha;
-            cnpHechos.IdMunicipio = _cnpHechosDto.IdMunicipio;
-            cnpHechos.IdBarrio = _cnpHechosDto.IdBarrio;
-            cnpHechos.Localidad = _cnpHechosDto.Localidad;
+            cnpHechos.MunicipioId = _cnpHechosDto.MunicipioId;
+            cnpHechos.BarrioId = _cnpHechosDto.BarrioId;
+            cnpHechos.LocalidadId = _cnpHechosDto.LocalidadId;
             cnpHechos.DireccionHechos = _cnpHechosDto.DireccionHechos;
-            cnpHechos.IdComportamiento = _cnpHechosDto.IdComportamiento;
+            //cnpHechos.IdComportamiento = _cnpHechosDto.IdComportamiento;
             cnpHechos.Apelacion = _cnpHechosDto.Apelacion;
             cnpHechos.RelatoHechos = _cnpHechosDto.RelatoHechos;
             cnpHechos.Mop = _cnpHechosDto.Mop;
             cnpHechos.Mrs = _cnpHechosDto.Mrs;
             cnpHechos.Minc = _cnpHechosDto.Minc;
             cnpHechos.Mtpp = _cnpHechosDto.Mtpp;
-            cnpHechos.Msia = _cnpHechosDto.Msia;
-            cnpHechos.Mtppp = _cnpHechosDto.Mtppp;
-            cnpHechos.Minicoe = _cnpHechosDto.Minicoe;
-            cnpHechos.Minisoe = _cnpHechosDto.Minisoe;
-            cnpHechos.CnpArt = _cnpHechosDto.CnpArt;
-            cnpHechos.CnpNum = _cnpHechosDto.CnpNum;
-            cnpHechos.CnpLit = _cnpHechosDto.CnpLit;
+            //cnpHechos.Msia = _cnpHechosDto.Msia;
+            //cnpHechos.Mtppp = _cnpHechosDto.Mtppp;
+            //cnpHechos.Minicoe = _cnpHechosDto.Minicoe;
+            //cnpHechos.Minisoe = _cnpHechosDto.Minisoe;
+            //cnpHechos.CnpArt = _cnpHechosDto.CnpArt;
+            //cnpHechos.CnpNum = _cnpHechosDto.CnpNum;
+            //cnpHechos.CnpLit = _cnpHechosDto.CnpLit;
             cnpHechos.Latitud = _cnpHechosDto.Latitud;
             cnpHechos.Longitud = _cnpHechosDto.Longitud;
-            cnpHechos.IdTipoLugar = _cnpHechosDto.IdTipoLugar;
+            //cnpHechos.IdTipoLugar = _cnpHechosDto.IdTipoLugar;
             cnpHechos.Descargos = _cnpHechosDto.Descargos;
             cnpHechos.HoraHechos = _cnpHechosDto.HoraHechos;
 
             cnpHechos.AtiendeApelacion = _cnpHechosDto.AtiendeApelacion;
-            cnpHechos.IdEntidadeRemiteApelac = _cnpHechosDto.IdEntidadeRemiteApelac;
-            cnpHechos.Fuente = 1;
-            cnpHechos.IdTipoTransp = _cnpHechosDto.IdTipoTransp;
+            //cnpHechos.IdEntidadeRemiteApelac = _cnpHechosDto.IdEntidadeRemiteApelac;
+            //cnpHechos.Fuente = 1;
+            //cnpHechos.IdTipoTransp = _cnpHechosDto.IdTipoTransp;
 
             cnpHechos.Vigente = true;
             cnpHechos.UsuarioCreacion = HttpContext.Current.User.Identity.Name;
@@ -70,9 +70,9 @@ namespace Core.Cnp
                 {
                     HechoId = x.HechoId,
                     Fecha = x.Fecha,
-                    IdMunicipio = x.IdMunicipio,
-                    IdBarrio = x.IdBarrio,
-                    Localidad = x.Localidad,
+                    MunicipioId = x.MunicipioId,
+                    BarrioId = x.BarrioId,
+                    LocalidadId = x.LocalidadId,
                     DireccionHechos = x.DireccionHechos
                 });
                 return resultado.ToList();
@@ -92,9 +92,9 @@ namespace Core.Cnp
                     {
                         HechoId = x.HechoId,
                         Fecha = x.Fecha,
-                        IdMunicipio = x.IdMunicipio,
-                        IdBarrio = x.IdBarrio,
-                        Localidad = x.Localidad,
+                        MunicipioId = x.MunicipioId,
+                        BarrioId = x.BarrioId,
+                        LocalidadId = x.LocalidadId,
                         DireccionHechos = x.DireccionHechos
                     }).FirstOrDefault();
                 return resultado;

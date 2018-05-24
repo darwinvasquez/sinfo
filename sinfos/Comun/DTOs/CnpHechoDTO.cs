@@ -11,20 +11,29 @@ namespace Comun.DTOs
         /// <summary>
         /// Fecha cuando ocurrieron los hechos. Formato “dd/mm/yyyy”
         /// </summary>
+        [DataType(DataType.Date)]
         public DateTime Fecha { get; set; }
+
+
+        [StringLength(40)]
+        public string PaisId { get; set; }
+
+        [StringLength(40)]
+        public string DepartamentoId { get; set; }
 
         /// <summary>
         /// Municipio donde ocurrieron los hechos.
         /// </summary>
-        public int IdMunicipio { get; set; }
+        [StringLength(40)]
+        public string MunicipioId { get; set; }
 
         /// <summary>
         /// Barrio donde ocurrió el hecho(s).
-        /// </summary>
-        public int IdBarrio { get; set; }
+        /// </summary>               
 
-        [StringLength(maximumLength: 100)]
-        public string Localidad { get; set; }
+        public string BarrioId { get; set; }
+       
+        public string LocalidadId { get; set; }
 
         [StringLength(maximumLength: 2555)]
         public string DireccionHechos { get; set; }

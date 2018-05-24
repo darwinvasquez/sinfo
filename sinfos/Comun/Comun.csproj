@@ -47,6 +47,7 @@
     <Compile Include="DTOs\CnpHechoDTO.cs" />
     <Compile Include="DTOs\CnpPersona.cs" />
     <Compile Include="DTOs\MedidaNoPagadaDTO.cs" />
+    <Compile Include="DTOs\PaisDTO.cs" />
     <Compile Include="DTOs\PersonaDTO.cs" />
     <Compile Include="DTOs\ResponseModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

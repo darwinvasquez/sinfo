@@ -2,6 +2,8 @@
 using Core.Cnp;
 using Core.Cnp.Abstraccion;
 using Core.Cnp.Reglas;
+using Core.General;
+using Core.General.Abstraccion;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,6 +27,9 @@ namespace AppWeb.Areas.Cnp.Controllers
         [HttpGet]
         public ActionResult Adicionar()
         {
+            IConsultarPais paises = new LugarGeografico();
+            var datos = paises.ConsultarPais();
+            ViewBag.PaisId = new SelectList(datos, "PaisId", "Descripcion");
             return View();
         }
 
@@ -36,7 +41,7 @@ namespace AppWeb.Areas.Cnp.Controllers
             {     
                 IRegistrarProcesoVerbalAbreviado proceso = new RegistrarProcesoVerbalAbreviado();
 
-                _cnpHechosDto.IdMunicipio = 6058;               
+                _cnpHechosDto.MunicipioId = "";               
                     try
                     {
 

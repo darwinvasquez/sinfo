@@ -71,6 +71,10 @@
     <Compile Include="Cnp\PersonaRepositorio.cs" />
     <Compile Include="Cnp\Reglas\RegistrarPersonaHecho.cs" />
     <Compile Include="Cnp\Reglas\RegistrarProcesoVerbalAbreviado.cs" />
+    <Compile Include="General\Abstraccion\IAgregarPais.cs" />
+    <Compile Include="General\Abstraccion\IConsultarPais.cs" />
+    <Compile Include="General\LugarGeografico.cs" />
+    <Compile Include="General\PaisRepositorio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -91,6 +95,7 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

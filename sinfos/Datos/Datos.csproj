@@ -68,10 +68,34 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="Cnp\Barrio.cs" />
     <Compile Include="Cnp\CalidadPersonaCnp.cs" />
     <Compile Include="Cnp\ContextCnp.cs" />
+    <Compile Include="Cnp\Departamento.cs" />
+    <Compile Include="Cnp\Fuente.cs" />
     <Compile Include="Cnp\Hecho.cs" />
+    <Compile Include="Cnp\Localidad.cs" />
+    <Compile Include="Cnp\Municipio.cs" />
+    <Compile Include="Cnp\Pais.cs" />
     <Compile Include="Cnp\Persona.cs" />
+    <Compile Include="Cnp\TipoComportamiento.cs" />
+    <Compile Include="Migrations\201805221812045_Tabla hecho persona calidadCnp.cs" />
+    <Compile Include="Migrations\201805221812045_Tabla hecho persona calidadCnp.Designer.cs">
+      <DependentUpon>201805221812045_Tabla hecho persona calidadCnp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805231400125_Creacion tabla hecho y sus dependencias.cs" />
+    <Compile Include="Migrations\201805231400125_Creacion tabla hecho y sus dependencias.Designer.cs">
+      <DependentUpon>201805231400125_Creacion tabla hecho y sus dependencias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805231444359_Creacion lista de valores.cs" />
+    <Compile Include="Migrations\201805231444359_Creacion lista de valores.Designer.cs">
+      <DependentUpon>201805231444359_Creacion lista de valores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805231533306_Creacion constructor hecho.cs" />
+    <Compile Include="Migrations\201805231533306_Creacion constructor hecho.Designer.cs">
+      <DependentUpon>201805231533306_Creacion constructor hecho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -94,6 +118,20 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201805221812045_Tabla hecho persona calidadCnp.resx">
+      <DependentUpon>201805221812045_Tabla hecho persona calidadCnp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805231400125_Creacion tabla hecho y sus dependencias.resx">
+      <DependentUpon>201805231400125_Creacion tabla hecho y sus dependencias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805231444359_Creacion lista de valores.resx">
+      <DependentUpon>201805231444359_Creacion lista de valores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805231533306_Creacion constructor hecho.resx">
+      <DependentUpon>201805231533306_Creacion constructor hecho.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
