@@ -19,19 +19,15 @@ namespace AppWeb.Areas.Cnp.Controllers
         {
             IListarHechosVerbalAbreviado hechos = new HechoRepositorio();
 
-            var datos = hechos.ListarHechosVerbalAbreviado();
+            var datos = hechos.ListarHechosVerbalAbreviado();          
 
             return View(datos);
         }
        
         [HttpGet]
         public ActionResult Adicionar()
-        {
-            IConsultarPais paises = new LugarGeografico();
-            var datos = paises.ConsultarPais();
-            //ViewBag.PaisId = new SelectList(datos, "PaisId", "Descripcion");
-
-            //ViewBag.BarrioId = new SelectList(null, "", "");
+        {           
+            ViewBag.MunicipioId = "eabbfb57-c667-4290-907b-0aeaddeed9b7";     
             return View();
         }
 
@@ -39,6 +35,12 @@ namespace AppWeb.Areas.Cnp.Controllers
         [HttpPost]
         public ActionResult Adicionar(CnpHechoDTO _cnpHechosDto)
         {
+
+            _cnpHechosDto.PaisId = "3fd8ceba-dfda-4afa-82f4-d519ac0bdb2b";
+            _cnpHechosDto.DepartamentoId = "eb8ade7e-e532-4c1c-9a6e-57c138232b8c";
+            _cnpHechosDto.MunicipioId = "eabbfb57-c667-4290-907b-0aeaddeed9b7";
+            _cnpHechosDto.FuenteId = "Alcaldía de la Unión";
+
             if (ModelState.IsValid)
             {     
                 IRegistrarProcesoVerbalAbreviado proceso = new RegistrarProcesoVerbalAbreviado();

@@ -3,10 +3,24 @@
     padding-bottom: 20px;
 }
 
-.panel-default {        
+.panel-default {
     border-top: 3px solid #f39c12;
     padding-top: 10px;
     padding-bottom: 10px;
+}
+
+.form-control {
+    margin-bottom: 10px;
+}
+
+
+label {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: 700;
+    color: grey;
+    font-size: 14px;
 }
 
 /* Set padding to keep content from hitting the edges */

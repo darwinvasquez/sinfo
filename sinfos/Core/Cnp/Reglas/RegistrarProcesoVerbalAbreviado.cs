@@ -14,6 +14,8 @@ namespace Core.Cnp.Reglas
         {
             var rm = new ResponseModel();
 
+            //AtiendeApelacion = Si e ciudadano apelana la decesion el inspector no atiende de lo contrario..  
+
             IAgregarHechoProcesoVerbalAbreviado registrar = new HechoRepositorio();
             registrar.AgregarHechoProcesoVerbalAbreviado(_cnpHechosDto);
 

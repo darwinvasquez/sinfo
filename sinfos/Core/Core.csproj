@@ -71,9 +71,25 @@
     <Compile Include="Cnp\PersonaRepositorio.cs" />
     <Compile Include="Cnp\Reglas\RegistrarPersonaHecho.cs" />
     <Compile Include="Cnp\Reglas\RegistrarProcesoVerbalAbreviado.cs" />
+    <Compile Include="General\Abstraccion\IAgregarBarrio.cs" />
+    <Compile Include="General\Abstraccion\IAgregarDepartamento.cs" />
+    <Compile Include="General\Abstraccion\IAgregarLocalidad.cs" />
+    <Compile Include="General\Abstraccion\IAgregarMunicipio.cs" />
     <Compile Include="General\Abstraccion\IAgregarPais.cs" />
+    <Compile Include="General\Abstraccion\IConsultarBarrios.cs" />
+    <Compile Include="General\Abstraccion\IConsultarBarriosPorMunicipio.cs" />
+    <Compile Include="General\Abstraccion\IConsultarDepartamento.cs" />
+    <Compile Include="General\Abstraccion\IConsultarDepartamentosPorPais.cs" />
+    <Compile Include="General\Abstraccion\IConsultarLocalidades.cs" />
+    <Compile Include="General\Abstraccion\IConsultarLocalidadesPorMunicipio.cs" />
+    <Compile Include="General\Abstraccion\IConsultarMunicipios.cs" />
+    <Compile Include="General\Abstraccion\IConsultarMunicipiosPorDepartamento.cs" />
     <Compile Include="General\Abstraccion\IConsultarPais.cs" />
+    <Compile Include="General\BarrioRepositorio.cs" />
+    <Compile Include="General\DepartamentoRepositorio.cs" />
+    <Compile Include="General\LocalidadRepositorio.cs" />
     <Compile Include="General\LugarGeografico.cs" />
+    <Compile Include="General\MunicipioRepositorio.cs" />
     <Compile Include="General\PaisRepositorio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

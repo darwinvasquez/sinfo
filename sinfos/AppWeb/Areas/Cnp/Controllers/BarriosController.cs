@@ -2,38 +2,39 @@
 using Core.General;
 using Core.General.Abstraccion;
 using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
 using System.Web.Mvc;
 
 namespace AppWeb.Areas.Cnp.Controllers
 {
-    public class PaisesController : Controller
-    {               
+    public class BarriosController : Controller
+    {
         public ActionResult Index()
         {
-            return View();
+            IConsultarBarrios barrios = new BarrioRepositorio();
+            return View(barrios.ConsultarBarrios());
         }
 
         [HttpGet]
-        public ActionResult Adicionar()
-        {         
-            return View();
-        }
+        public ActionResult Adicionar() => View();       
 
         [ValidateAntiForgeryToken]
         [HttpPost]
-        public ActionResult Adicionar(PaisDTO _params)
+        public ActionResult Adicionar(BarrioDTO _params)
         {
             string mensaje = string.Empty;
 
             if (!ModelState.IsValid)
             {
                 return View(_params);
-            }  
+            }
 
             try
             {
-                IAgregarPais pais = new PaisRepositorio();
-                pais.AgregarPais(_params, out mensaje);
+                IAgregarBarrio barrio = new BarrioRepositorio();
+                barrio.AgregarBarrio(_params, out mensaje);
             }
             catch (Exception ex)
             {
@@ -41,6 +42,5 @@ namespace AppWeb.Areas.Cnp.Controllers
             }
             return RedirectToAction("Index");
         }
-
     }
 }

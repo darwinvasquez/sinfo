@@ -1,0 +1,59 @@
+﻿@model IEnumerable<Comun.DTOs.BarrioDTO>
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="breadcrumb">
+    <ol class="breadcrumb pull-right">
+        <li><a href="#">Inicio</a></li>
+        <li class="active">Listar</li>
+    </ol>
+    <h3>Lugar Geográfico <small>Barrio</small></h3>
+</div>
+<div class="panel panel-default">
+    <p>
+        @Html.ActionLink("Nuevo", "Adicionar")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.BarrioId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Municipio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Descripcion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CodigoDane)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CodigoPonal)
+            </th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.BarrioId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Municipio)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Descripcion)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CodigoDane)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CodigoPonal)
+                </td>
+            </tr>
+        }
+
+    </table>
+</div>
+

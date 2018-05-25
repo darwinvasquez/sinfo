@@ -6,34 +6,37 @@ using System.Web.Mvc;
 
 namespace AppWeb.Areas.Cnp.Controllers
 {
-    public class PaisesController : Controller
-    {               
+    public class DepartamentosController : Controller
+    {
+        // GET: Cnp/Departamentos
         public ActionResult Index()
         {
-            return View();
+            IConsultarDepartamento departamentos = new DepartamentoRepositorio();
+            return View(departamentos.ConsultarDepartamento());
         }
+
 
         [HttpGet]
         public ActionResult Adicionar()
-        {         
+        {
             return View();
         }
 
         [ValidateAntiForgeryToken]
         [HttpPost]
-        public ActionResult Adicionar(PaisDTO _params)
+        public ActionResult Adicionar(DepartamentoDTO _params)
         {
             string mensaje = string.Empty;
 
             if (!ModelState.IsValid)
             {
                 return View(_params);
-            }  
+            }
 
             try
             {
-                IAgregarPais pais = new PaisRepositorio();
-                pais.AgregarPais(_params, out mensaje);
+                IAgregarDepartamento dato = new DepartamentoRepositorio();
+                dato.AgregarDepartamento(_params, out mensaje);
             }
             catch (Exception ex)
             {
@@ -41,6 +44,5 @@ namespace AppWeb.Areas.Cnp.Controllers
             }
             return RedirectToAction("Index");
         }
-
     }
 }

@@ -43,10 +43,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="DTOs\BarrioDTO.cs" />
     <Compile Include="DTOs\CalidadPersonaCnpDTO.cs" />
     <Compile Include="DTOs\CnpHechoDTO.cs" />
     <Compile Include="DTOs\CnpPersona.cs" />
+    <Compile Include="DTOs\DepartamentoDTO.cs" />
+    <Compile Include="DTOs\LocalidadDTO.cs" />
     <Compile Include="DTOs\MedidaNoPagadaDTO.cs" />
+    <Compile Include="DTOs\MunicipioDTO.cs" />
     <Compile Include="DTOs\PaisDTO.cs" />
     <Compile Include="DTOs\PersonaDTO.cs" />
     <Compile Include="DTOs\ResponseModel.cs" />

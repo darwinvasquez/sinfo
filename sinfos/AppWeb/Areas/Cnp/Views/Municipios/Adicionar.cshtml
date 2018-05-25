@@ -1,0 +1,94 @@
+﻿@model Comun.DTOs.MunicipioDTO
+
+@{
+    ViewBag.Title = "Adicionar";
+}
+@section scripts{
+    <script>
+        $(function () {
+            var urlPaises = "@Url.Action("ConsultarDepartamentos", "LugarGeografico")";
+
+            $.ajax({
+                type: 'POST',
+                url: urlPaises,
+                dataType: 'json',
+                data: {},
+
+                success: function (datos) {
+                    $.each(datos, function (i, dato) {
+                        $("#departamento").append('<option value="' + dato.Value + '">' + dato.Text + '</option>');
+                    });
+                },
+                error: function (ex) {
+                    alert('Fallo al traer los registros' + ex);
+                }
+            })
+
+        });
+    </script>
+}
+
+<div class="breadcrumb">
+    <ol class="breadcrumb pull-right">
+        <li><a href="#">Inicio</a></li>
+        <li class="active">Registrar</li>
+    </ol>
+    <h3>Lugar Geográfico <small>Departamento</small></h3>
+</div>
+<div class="panel panel-default">
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        <form>
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.DepartamentoId, htmlAttributes: new { @class = "control-label col-md-12" })
+                        <div class="col-md-12">
+                            @Html.DropDownList("DepartamentoId", new SelectList(string.Empty, "Value", "Text"), "--- Seleccionar ---", htmlAttributes: new { @class = "form-control", @id = "departamento", @required = true })
+                            @Html.ValidationMessageFor(model => model.DepartamentoId, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Descripcion, htmlAttributes: new { @class = "control-label col-md-12" })
+                        <div class="col-md-12">
+                            @Html.EditorFor(model => model.Descripcion, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Descripcion, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.CodigoDane, htmlAttributes: new { @class = "control-label col-md-12" })
+                        <div class="col-md-12">
+                            @Html.EditorFor(model => model.CodigoDane, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.CodigoDane, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.CodigoPonal, htmlAttributes: new { @class = "control-label col-md-12" })
+                        <div class="col-md-12">
+                            @Html.EditorFor(model => model.CodigoPonal, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.CodigoPonal, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br />
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <div class="col-md-offset-2 col-md-10">
+                            <input type="submit" value="Create" class="btn btn-success" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    }
+</div>

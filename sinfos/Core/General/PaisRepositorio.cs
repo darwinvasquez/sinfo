@@ -2,10 +2,12 @@
 using Core.General.Abstraccion;
 using Datos.Cnp;
 using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Core.General
 {
-    public class PaisRepositorio : IAgregarPais
+    public class PaisRepositorio : IAgregarPais, IConsultarPais
     {
         public bool AgregarPais(PaisDTO _params, out string _paisId)
         {
@@ -30,6 +32,24 @@ namespace Core.General
                 return false;
             }
 
+        }
+        public List<PaisDTO> ConsultarPais()
+        {
+            using (ContextCnp db = new ContextCnp())
+            {
+                db.Configuration.LazyLoadingEnabled = false;
+                db.Configuration.ProxyCreationEnabled = false;
+                db.Configuration.AutoDetectChangesEnabled = false;
+
+                var resultado = db.Pais.Where(x => x.Vigente == true).Select(x => new PaisDTO
+                {
+                    PaisId = x.PaisId,
+                    Descripcion = x.Descripcion,
+                    CodigoDane = x.CodigoDane,
+                    CodigoPonal = x.CodigoPonal
+                });
+                return resultado.ToList();
+            }
         }
     }
 }
